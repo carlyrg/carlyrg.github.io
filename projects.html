@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Carly Gerhart - Porfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="blog.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- navigation-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-default">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Carly Gerhart</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto ">
+                        <a class="nav-link" href="Index.html">Home
+                        </a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Portfolio
+                                <!-- <span class="sr-only">(current)</span> -->
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="data_portfolio.html">Data Analytics</a>
+                                <a class="dropdown-item active" href="#">Data Analysis Projects</a>
+                                <a class="dropdown-item" href="design.html">Graphic Design</a>
+                                <a class="dropdown-item" href="photography.html">Photography</a>
+                            </div>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resume.html">Resume</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+
+                <h1 class="my-4">Portfolio <br>
+                    <small>Data Analysis - Larger projects</small>
+                </h1>
+
+                <!-- Blog Post -->
+                <div class="card mb-4">
+
+                    <div class="card-body">
+                        <h2 class="card-title blog-title" id="bikeShare">Group Project - NYC & SF Bike-Share Analysis</h2>
+                        <img class="card-img-top" src="images/NYCbike.jpg" alt="New York City bike">
+                        <hr>
+                        <p class="card-text"><strong>Background:</strong> As a group we analyzed the city-wide bike share
+                            programs in New York City and San Francisco, individually then comparing them to each other.
+                            Due to limitations we were only able to take a six-month snapshot of the data that was available.
+                            The time period we looked at included some winter months and given that New York experiences
+                            more of a winter than California that skews the data some, making it appear as though San Francisco
+                            has a much higher usage rate than New York City which is not accurate. While total numbers may
+                            be off for each location we believe that we are still able to identify trends in the both peak
+                            usage times and the type of rider most likely to use the service.
+                        </p>
+                        <p class="card-text"><strong>Process:</strong> Our data was available online and I downloaded each
+                            month for each city individually. Despite them coming from the same source there was a bit of
+                            cleaning up of the files that had to be done so that they could all be joined together. The column
+                            headers did not match and how gender was indicated differed between cities, as examples. I joined
+                            them all into a Pandas DataFrame then broke them out into age group bins and by city to make
+                            further analysis easier. I relied heavily on Pandas for analysis of the data and used Matplotlib,
+                            Plotly and Seaborn libraries for the data visualizations.</p>
+                        <p class="card-text"><strong>Conclusions:</strong> Some high-level observations included:
+                            <ul>
+                                <li>General age of the rider: 36</li>
+                                <li>Males make up significantly more than half of all riders</li>
+                                <li>Peak usage hours are during work rush-hours, with evening being slightly more popular
+                                    than the morning time</li>
+                                <li>Most frequently used stations for starting/ending a ride</li>
+                                <li>Average trip duration</li>
+                            </ul>
+                        </p>
+                        <!-- </div> -->
+                        <hr>
+                        <h5 class="blog-title">Visualizations <br />
+                            <small> <em>click image to enlarge</em></small></h5>
+
+                        <div class="row ">
+                            <div class="col-sm-3 col-md-6 mb-3 mx-auto text-center">
+                                <a href="images/start_time_NYC.png"><img class="img-fluid" src="images/start_time_NYC.png"
+                                        alt="day of week graph"></a>
+                            </div>
+
+                            <div class="col-sm-3 col-md-6 mb-3 mx-auto  text-center">
+                                <a href="images/start_time_sf.png"><img class="img-fluid" src="images/start_time_sf.png"></a>
+                            </div>
+
+                            <div class="col-sm-3 col-md-6 mb-3 mx-auto text-center">
+                                <a href="images/trip_age_duration.png"> <img class="img-fluid " src="images/trip_age_duration.png"></a>
+                            </div>
+                            <div class="col-sm-3 col-md-6 mb-3 mx-auto  text-center">
+                                <a href="images/dow_dist.png"><img class="img-fluid" src="images/dow_dist.png"></a>
+                            </div>
+
+                            <div class="col-sm-3 col-md-6 mb-3 mx-auto  text-center">
+                                <a href="images/SF_age.png"><img class="img-fluid" src="images/SF_age.png"></a>
+                            </div>
+                            <div class="col-sm-3 col-md-6 mb-3 mx-auto  text-center">
+                                <a href="images/ny_age.png"><img class="img-fluid" src="images/ny_age.png"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- <div class="card-footer text-muted">
+                    July 2018
+                </div> -->
+            </div>
+
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Categories Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Project Samples</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0 ">
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#scatter">D3.js</a>
+                                    </li>
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#ufo">JavaScript</a>
+                                    </li>
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#mars">Web Scraping</a>
+                                    </li>
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#sql">SQL</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#twitter">Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#weather">API</a>
+                                    </li>
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#matplotlib">Matplotlib</a>
+                                    </li>
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#pandas">Python & Pandas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Larger Projects</h5>
+                    <div class="card-body">
+                        <a class="blog-link" href="data_portfolio.html#pandas">NYC and SF Bike Share Programs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <div class="container">
+        <footer class="navbar-expand-lg navbar-dark bg-dark">
+            <p class="m-0 text-center text-white"> &copy; 2018 Carly Gerhart</p>
+            <!-- </div> -->
+            <!-- /.container -->
+        </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
