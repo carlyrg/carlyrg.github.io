@@ -26,8 +26,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-default">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Carly Gerhart</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -36,8 +36,8 @@
                         <a class="nav-link" href="index.html">Home
                         </a>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Portfolio
                                 <!-- <span class="sr-only">(current)</span> -->
                             </a>
@@ -77,27 +77,41 @@
                         <h2 class="card-title blog-title" id="bikeShare">Group Project - NYC & SF Bike-Share Analysis</h2>
                         <img class="card-img-top" src="images/NYCbike.jpg" alt="New York City bike">
                         <hr>
-                        <p class="card-text"><strong>Background:</strong> As a group we analyzed the city-wide bike share
-                            programs in New York City and San Francisco, individually then comparing them to each other.
-                            Due to limitations we were only able to take a six-month snapshot of the data that was available.
-                            The time period we looked at included some winter months and given that New York experiences
-                            more of a winter than California that skews the data some, making it appear as though San Francisco
-                            has a much higher usage rate than New York City which is not accurate. While total numbers may
-                            be off for each location we believe that we are still able to identify trends in the both peak
+                        <p class="card-text"><strong>Background:</strong> As a group we analyzed the city-wide bike
+                            share
+                            programs in New York City and San Francisco, individually then comparing them to each
+                            other.
+                            Due to limitations we were only able to take a six-month snapshot of the data that was
+                            available.
+                            The time period we looked at included some winter months and given that New York
+                            experiences
+                            more of a winter than California that skews the data some, making it appear as though San
+                            Francisco
+                            has a much higher usage rate than New York City which is not accurate. While total numbers
+                            may
+                            be off for each location we believe that we are still able to identify trends in the both
+                            peak
                             usage times and the type of rider most likely to use the service.
                         </p>
-                        <p class="card-text"><strong>Process:</strong> Our data was available online and I downloaded each
-                            month for each city individually. Despite them coming from the same source there was a bit of
-                            cleaning up of the files that had to be done so that they could all be joined together. The column
-                            headers did not match and how gender was indicated differed between cities, as examples. I joined
-                            them all into a Pandas DataFrame then broke them out into age group bins and by city to make
-                            further analysis easier. I relied heavily on Pandas for analysis of the data and used Matplotlib,
+                        <p class="card-text"><strong>Process:</strong> Our data was available online and I downloaded
+                            each
+                            month for each city individually. Despite them coming from the same source there was a bit
+                            of
+                            cleaning up of the files that had to be done so that they could all be joined together. The
+                            column
+                            headers did not match and how gender was indicated differed between cities, as examples. I
+                            joined
+                            them all into a Pandas DataFrame then broke them out into age group bins and by city to
+                            make
+                            further analysis easier. I relied heavily on Pandas for analysis of the data and used
+                            Matplotlib,
                             Plotly and Seaborn libraries for the data visualizations.</p>
                         <p class="card-text"><strong>Conclusions:</strong> Some high-level observations included:
                             <ul>
                                 <li>General age of the rider: 36</li>
                                 <li>Males make up significantly more than half of all riders</li>
-                                <li>Peak usage hours are during work rush-hours, with evening being slightly more popular
+                                <li>Peak usage hours are during work rush-hours, with evening being slightly more
+                                    popular
                                     than the morning time</li>
                                 <li>Most frequently used stations for starting/ending a ride</li>
                                 <li>Average trip duration</li>
@@ -135,14 +149,49 @@
 
                     </div>
                 </div>
-                <!-- <div class="card-footer text-muted">
+                <div class="card mb-4">
+
+                    <div class="card-body">
+                        <h2 class="card-title blog-title" id="flights">Partner Project - Denver Flight Data</h2>
+                        <img class="card-img-top" src="images/DenRoutes.png" alt="Routes by airline out of Denver">
+                        <hr>
+                        <p class="card-text"><strong>Background:</strong> We pulled a series of datasets from
+                            OpenFlights on airline, airports and routes, then creatively figured out how to merge them
+                            together into one dataset allowing us to create a map of flight routes, by airline. To
+                            reduce the amount of data we were dealing with we decided to limit it to only flights
+                            originating from Denver. The biggest
+                            challenge in this portion was mainly related to getting an accurate dataset to work with.
+                            The individual datasets had similar columns and codes but they were used differently across
+                            the data and keeping origin airport and destination airport separate throughout the process
+                            took precision.</p>
+
+                        <p>The other main piece of this project included featuring a user-driven search of current
+                            flight deals. It is designed for the flexible travel who wants to see what deals are
+                            available in a given month. Enter the city code of departure, the month of travel and the
+                            country you'd like to travel to and a list of deals is returned in a javascript-driven
+                            table. The challenge in this piece of the project was scraping and filtering SkyScanner
+                            website. An API made the scraping easier however every possible destination in the database
+                            was returned whether flying there was an option or not. To resolve this we had to filter
+                            the returned data based on whether there was an image URL included (because only valid
+                            destinations included an image on the website) then further by direct and multi-stop
+                            pricing criteria.</p>
+                        <p>Both pieces are compiled onto a website running with Flask</p>
+
+                        <p class="card-text"><strong>Process:</strong>
+                            We used Pandas to clean and merge the datasets and export to
+                            geoJSON data so we could graph it. Using Leaflet.js we created a multilayer map graphing
+                            the top few airlines' routes/destinations, and also breaking it down to
+                            domestic/international, and adding a pop-up giving the name of the airport. </p>
+
+                    </div>
+                    <!-- <div class="card-footer text-muted">
                     July 2018
                 </div> -->
-            </div>
+                </div>
 
 
-            <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
+                <!-- Sidebar Widgets Column -->
+                <!-- <div class="col-md-4"> -->
 
                 <!-- Categories Widget -->
                 <div class="card my-4">
@@ -152,6 +201,12 @@
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0 ">
                                     <li>
+                                        <a class="blog-link" href="data_portfolio.html#nycBikes">Tableau</a>
+                                    </li>
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#earthquakes">Leaflet.js</a>
+                                    </li>
+                                    <li>
                                         <a class="blog-link" href="data_portfolio.html#scatter">D3.js</a>
                                     </li>
                                     <li>
@@ -160,13 +215,14 @@
                                     <li>
                                         <a class="blog-link" href="data_portfolio.html#mars">Web Scraping</a>
                                     </li>
-                                    <li>
-                                        <a class="blog-link" href="data_portfolio.html#sql">SQL</a>
-                                    </li>
+
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a class="blog-link" href="data_portfolio.html#sql">SQL</a>
+                                    </li>
                                     <li>
                                         <a class="blog-link" href="data_portfolio.html#twitter">Twitter</a>
                                     </li>
@@ -189,7 +245,9 @@
                 <div class="card my-4">
                     <h5 class="card-header">Larger Projects</h5>
                     <div class="card-body">
-                        <a class="blog-link" href="data_portfolio.html#pandas">NYC and SF Bike Share Programs</a>
+                        <a class="blog-link" href="projects.html#bikeShare">NYC and SF Bike Share Programs</a><br />
+                        <a class="blog-link" href="projects.html#flights">Denver Flight Data</a>
+                        <!-- <a class="blog-link" href="data_portfolio.html#vru">Running Across America</a> -->
                     </div>
                 </div>
             </div>
@@ -209,7 +267,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    </div>
 </body>
 
 </html>
