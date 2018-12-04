@@ -188,10 +188,63 @@
                     July 2018
                 </div> -->
                 </div>
+                <div class="card mb-4">
+
+                    <div class="card-body">
+                        <h2 class="card-title blog-title" id="vru">Final Project - Running Across America</h2>
+                        <img class="card-img-top" src="images/RunningAcrossAmerica_viz.png" alt="comparison of routes and elevations">
+                        <hr>
+                        <p class="card-text"> My Running Across America project focused on
+                            data from four athletes that ran across the United States in 2016. All of the data was
+                            pulled from Strava.com a social network site for fitness enthusiasts. Using Selenium and
+                            BeautifulSoup I scrapped the website for each runner pulling GeoJSON data, pace, duration,
+                            distance and date of run. The set-up of pages and varied slightly for each runner so I had
+                            to have four versions of the scrape code, one file for each runner. I continued to work
+                            with each runner individually while I cleaned the data, and filtered down to just the data
+                            relevant to their run across America. Working with the JSON data I ended up with over one
+                            million rows of data in total. In running calculations on this data, I was finding that my
+                            results were not matching the data that was showing on Strava’s website and I knew the
+                            results I was returning for average pace just didn’t seem right, even though the
+                            math/formula was. The JSON data included points for every time the runner’s watch pinged
+                            GPS so approximately every four seconds. I believe Strava’s algorithm is more advanced and
+                            able to eliminate data points for when the runner was stopped or other erroneous data, that
+                            could be affecting the accuracy of my results. Frustrated with this inaccuracy I decided to
+                            scrape Strava again, this time using their front-facing website, rather than accessing the
+                            JSON data. One difficulty I ran into with this method was my results included other
+                            people’s run data. Since Strava is a social network other people are able to share their
+                            runs on other people’s pages. I had to find a way to eliminate this data. I also had Garmin
+                            data from one of the runners which provided me a little more in-depth information so I did
+                            further analysis on just his run. I kept this data separate from the Strava data, because
+                            even though Garmin uploads to Strava the data between the two did not seem to match.</p>
+
+                            <p>Once I had data I was satisfied with I moved into Tableau to create visualizations
+                            comparing the four runners and their routes, average pace, distance and time. Using the
+                            GeoJSON information I retrieved from Strava I was able to plot their four routes, which in
+                            my opinion is one of the most interesting aspects. Along with that I compared altitude,
+                            average pace, total duration and total distance run per day. All of these visualizations
+                            are controlled by one global filter so you can view just one runner at a time. Some of my
+                            further analysis on Jason included comparing elevation and temperature to his average pace
+                            as well as table to filter his top five runs, filtered by each variable.</p>
+
+                            <p>The final piece of my project included an attempt at machine learning. I used the Random
+                            Forest method to predict the total distance given the variables of duration, runner and
+                            average pace. This turned out to be approximately 96% accurate, predicting within 2.4 miles
+                            of actual. As expected, total duration of the run has the greatest impact on the total
+                            distance of the run. How many days the runner was in to their run, had very little impact
+                            on their total distance. All of these runners were very consistent in their pace and
+                            distance run each day. In another formula I attempted to predict the runner based on
+                            randomly selected data. This set of data was not optimal for machine learning since it was
+                            all very consistent and also not a very good representation of typical running.</p>
+
+                    </div>
+                    <!-- <div class="card-footer text-muted">
+                    October 2018
+                </div> -->
+                </div>
             </div>
 
-                <!-- Sidebar Widgets Column -->
-                <div class="col-md-4">
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
 
                 <!-- Categories Widget -->
                 <div class="card my-4">
@@ -246,8 +299,8 @@
                     <h5 class="card-header">Larger Projects</h5>
                     <div class="card-body">
                         <a class="blog-link" href="projects.html#bikeShare">NYC and SF Bike Share Programs</a><br />
-                        <a class="blog-link" href="projects.html#flights">Denver Flight Data</a>
-                        <!-- <a class="blog-link" href="data_portfolio.html#vru">Running Across America</a> -->
+                        <a class="blog-link" href="projects.html#flights">Denver Flight Data</a><br />
+                        <a class="blog-link" href="data_portfolio.html#vru">Running Across America</a>
                     </div>
                 </div>
             </div>
